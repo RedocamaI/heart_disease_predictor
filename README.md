@@ -4,8 +4,8 @@ This model solves a classification problem, which uses Logistic Regression along
 
 # EDA results:
 While analysing the data I found:
-[*] No **null** values.
-[*] Most of the rows were duplicated, so those duplicates were removed since their presence would lead to model overfitting, and hence a biased dataset.
+1. No **null** values.
+2. Most of the rows were duplicated, so those duplicates were removed since their presence would lead to model overfitting, and hence a biased dataset.
 
 # Feature Selection results:
 The feature selection done through pearsons correlation matrix, shows that there is no feature with more than 85% correlation to another.

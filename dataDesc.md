@@ -29,8 +29,8 @@ Medical(current)
 - Glucose: glucose level (Continuous)
 - Predict variable (desired target)
 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
-Logistic Regression
-Logistic regression is a type of regression analysis in statistics used for prediction of outcome of a categorical dependent variable from a set of predictor or independent variables. In logistic regression the dependent variable is always binary. Logistic regression is mainly used to for prediction and also calculating the probability of success.
+## Logistic Regression
+Logistic regression is a type of regression analysis in statistics used for prediction of outcome of a *categorical dependent variable* from a set of predictor or independent variables. In logistic regression the dependent variable is always binary. Logistic regression is mainly used to for prediction and also calculating the probability of success.
 The results above show some of the attributes with P value higher than the preferred alpha(5%) and thereby showing low statistically significant relationship with the probability of heart disease. Backward elimination approach is used here to remove those attributes with highest P-value one at a time followed by running the regression repeatedly until all attributes have P Values less than 0.05.
 Feature Selection: Backward elimination (P-value approach)
 Logistic regression equation

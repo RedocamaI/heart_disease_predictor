@@ -32,34 +32,6 @@ Medical(current)
 ## Logistic Regression
 Logistic regression is a type of regression analysis in statistics used for prediction of outcome of a *categorical dependent variable* from a set of predictor or independent variables. In logistic regression the dependent variable is always binary. Logistic regression is mainly used to for prediction and also calculating the probability of success.
 The results above show some of the attributes with P value higher than the preferred alpha(5%) and thereby showing low statistically significant relationship with the probability of heart disease. Backward elimination approach is used here to remove those attributes with highest P-value one at a time followed by running the regression repeatedly until all attributes have P Values less than 0.05.
-Feature Selection: Backward elimination (P-value approach)
-Logistic regression equation
-P=eβ0+β1X1/1+eβ0+β1X1P=eβ0+β1X1/1+eβ0+β1X1
-When all features plugged in:
-logit(p)=log(p/(1−p))=β0+β1∗Sexmale+β2∗age+β3∗cigsPerDay+β4∗totChol+β5∗sysBP+β6∗glucoselogit(p)=log(p/(1−p))=β0+β1∗Sexmale+β2∗age+β3∗cigsPerDay+β4∗totChol+β5∗sysBP+β6∗glucose
-
-Interpreting the results: Odds Ratio, Confidence Intervals and P-values
-• This fitted model shows that, holding all other features constant, the odds of getting diagnosed with heart disease for males (sexmale = 1)over that of females (sexmale = 0) is exp(0.5815) = 1.788687. In terms of percent change, we can say that the odds for males are 78.8% higher than the odds for females.
-• The coefficient for age says that, holding all others constant, we will see 7% increase in the odds of getting diagnosed with CDH for a one year increase in age since exp(0.0655) = 1.067644.
-• Similarly , with every extra cigarette one smokes thers is a 2% increase in the odds of CDH.
-• For Total cholesterol level and glucose level there is no significant change.
-
-• There is a 1.7% increase in odds for every unit increase in systolic Blood Pressure.
-
-Model Evaluation - Statistics
-From the above statistics it is clear that the model is highly specific than sensitive. The negative values are predicted more accurately than the positives.
-Predicted probabilities of 0 (No Coronary Heart Disease) and 1 ( Coronary Heart Disease: Yes) for the test data with a default classification threshold of 0.5
-lower the threshold
-Since the model is predicting Heart disease too many type II errors is not advisable. A False Negative ( ignoring the probability of disease when there actually is one) is more dangerous than a False Positive in this case. Hence in order to increase the sensitivity, threshold can be lowered.
-
-Conclusions
-• All attributes selected after the elimination process show P-values lower than 5% and thereby suggesting significant role in the Heart disease prediction.
-
-• Men seem to be more susceptible to heart disease than women. Increase in age, number of cigarettes smoked per day and systolic Blood Pressure also show increasing odds of having heart disease
-
-• Total cholesterol shows no significant change in the odds of CHD. This could be due to the presence of 'good cholesterol(HDL) in the total cholesterol reading. Glucose too causes a very negligible change in odds (0.2%)
-
-• The model predicted with 0.88 accuracy. The model is more specific than sensitive. Overall model could be improved with more data
 
 Appendix
 http://www.who.int/mediacentre/factsheets/fs317/en/

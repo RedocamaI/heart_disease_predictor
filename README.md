@@ -1,18 +1,36 @@
-# Heart_disease_predictor
-Is a Machine Learning model that predicts the Heart disease of a patient, based on certain features. With the use of the Logistic regression, an accuracy of 86.81% is achieved. The use of feature scaling also helped with the above accuracy.
+# LOGISTIC REGRESSION - HEART DISEASE PREDICTION
 
-## EDA results:
-While analysing the data I found:
-1. No **null** values.
-2. Most of the rows were duplicated, so those duplicates were removed since their presence would lead to model overfitting, and hence a biased dataset.
+## Introduction
+World Health Organization has estimated 12 million deaths occur worldwide, every year due to Heart diseases. Half the deaths in the United States and other developed countries are due to cardio vascular diseases. The early prognosis of cardiovascular diseases can aid in making decisions on lifestyle changes in high risk patients and in turn reduce the complications. This research intends to pinpoint the most relevant/risk factors of heart disease as well as predict the overall risk using logistic regression
 
-## Feature Selection results:
-The feature selection done through pearsons correlation matrix, shows that there is no feature with more than 85% correlation to another.
+## Data Preparation
+### Source
+The dataset is publically available on the Kaggle website, and it is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease (CHD).The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes.
 
-## Feature Scaling:
-Feature scaling was performed on a subset of the dataset. This was because some of the features seemed out of the normal range of the dataset.
-Standard scaler class was used for feature scaling.
-
-## Training and fitting the model:
-On training the logistic regression model, an accuracy of 86.8% was found on the split unseen dataset. 
-This accuracy can further be increased by using a different type of scaler.
+### Variables
+Each attribute is a potential risk factor. There are both demographic, behavioral and medical risk factors.
+- Demographic:
+    - Sex: male or female(Nominal)
+    - Age: Age of the patient;(Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)
+- Behavioral
+    - Current Smoker: whether or not the patient is a current smoker (Nominal)
+    - Cigs Per Day: the number of cigarettes that the person smoked on average in one day.(can be considered continuous as one can have any number of cigarettes, even half a cigarette.)
+- Medical( history)
+    - BP Meds: whether or not the patient was on blood pressure medication (Nominal)
+    - Prevalent Stroke: whether or not the patient had previously had a stroke (Nominal)
+    - Prevalent Hyp: whether or not the patient was hypertensive (Nominal)
+- Diabetes: whether or not the patient had diabetes (Nominal)
+Medical(current)
+- Tot Chol: total cholesterol level (Continuous)
+- Sys BP: systolic blood pressure (Continuous)
+- Dia BP: diastolic blood pressure (Continuous)
+- BMI: Body Mass Index (Continuous)
+- Heart Rate: heart rate (Continuous - In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)
+- Glucose: glucose level (Continuous)
+- Predict variable (desired target)
+10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
+## Important notes
+In this dataset we have a distribution of 85% of class 0 and 15% of class 1. So a dummy model that predicts every case as 0 will have 85% accuracy.
+More than that, since this is a health related problem, our false negatives are way more important than our false positives since a false negative can cost someones life.
+Appendix
+http://www.who.int/mediacentre/factsheets/fs317/en/
